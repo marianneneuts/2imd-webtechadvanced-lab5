@@ -23,9 +23,9 @@ const getId = (req, res) => {
 
     const response = {
         status: "success",
-        message : `GETTING message with id ${id}`,
-        data : {
-            messages : [
+        message: `GETTING message with id ${id}`,
+        data: {
+            messages: [
                 {
                     "user" : "Marianne",
                     "message" : "Hi"
@@ -36,5 +36,22 @@ const getId = (req, res) => {
     res.json(response);
 };
 
+const create = (req, res) => {
+    const response = {
+        status: "success",
+        message: "POSTING a new message for user Marianne",
+        data: {
+            messages: [
+                {
+                    "user" : "Marianne",
+                    "message" : "Hello person!"
+                }
+            ]
+        }
+    };
+    res.json(response);
+};
+
 module.exports.getAll = getAll;
 module.exports.getId = getId;
+module.exports.create = create; 
