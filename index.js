@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/api/v1/messages", messagesRouter);
 
 app.get('/', (req, res) => {
-    res.send("Hello world!");
+    res.render("index", {title: "Hello", message: "Person"});
 });
 
 app.listen(port, () => {
